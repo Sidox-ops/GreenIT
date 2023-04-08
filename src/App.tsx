@@ -30,7 +30,7 @@ const App: Component = () => {
                 "margin-top": "-100px",
               }}
             >
-              404 Not found
+              404 Not found 😪
             </h1>
           }
         />

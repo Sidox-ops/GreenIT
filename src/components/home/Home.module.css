@@ -81,6 +81,7 @@ h2 {
     width: 30%;
     margin: 0 10px;
     background-color: white;
+    cursor: pointer;
     color: black;
 }
 

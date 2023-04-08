@@ -59,48 +59,40 @@ const Car: Component = () => {
         cars().find((car: ICar) => car.id === parseInt(params.id))
     );
 
-    if (!car()) {
-        return (
-            <h1
-                style={{
-                    display: "flex",
-                    "justify-content": "center",
-                    height: "75vh",
-                    "align-items": "center",
-                    "margin-top": "-100px",
-                }}
-            >
-                Aucun véhicule trouvé 🤷‍♂️
-            </h1>
-        );
-    }
-
     return (
         <>
-            <div class={styles.car}>
-                <section>
-                    {/* TODO 🛠️: Use a optimized carousel to display all images WITH LAZY LOADING!! */}
-                    {/* <img
-                        src={`/src/assets/cars/${car()?.images[0]}`}
-                        alt={car()?.name}
-                        class={styles.carImage}
-                    /> */}
-                    <div class={styles.carImage}>
-                        <Carousel images={car()?.images} />
-                    </div>
-                    <article class={styles.carDetails}>
-                        <h1>{car()?.name}</h1>
+            <section
+                class={styles.carSection}
+                style={{
+                    // tricks for sticky footer
+                    "min-height": "75vh",
+                    "align-items": "center",
+                }}
+            >
+                {/* TODO 🛠️: Use a optimized carousel to display all images WITH LAZY LOADING!! */}
+                <div class={styles.carImage}>
+                    <Carousel images={car()?.images} />
+                </div>
+                <article class={styles.carDetails}>
+                    <h1>{car()?.name}</h1>
 
-                        <p style={{ "font-size": "0.9em" }}>
-                            {car()?.shortDescription}
-                        </p>
-                        <p>
-                            {car()?.year} | {car()?.kilometer}km
-                        </p>
-                        <p class={styles.carPrice}>{car()?.price}€</p>
-                    </article>
-                </section>
-            </div>
+                    <p style={{ "font-size": "0.9em" }}>
+                        {car()?.shortDescription}
+                    </p>
+                    <p>
+                        {car()?.year} | {car()?.kilometer}km
+                    </p>
+                    <p class={styles.carPrice}>{car()?.price}€</p>
+                </article>
+            </section>
+            <section class={styles.carBreadcrumbs}>
+                <button class={styles.carBreadcrumbsButton}>
+                    Plus d'infos
+                </button>
+                <button class={styles.carBreadcrumbsButton}>
+                    Demande de devis
+                </button>
+            </section>
         </>
     );
 };

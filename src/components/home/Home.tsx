@@ -22,27 +22,27 @@ const Home: Component = () => {
       <div class={styles.popularCarSection}>
         <h2 class={styles.popularCarTitle}>Les occasions les plus populaires</h2>
         <div class={styles.container}>
-          <div class={styles.popularCar}>
+          <a class={styles.popularCar} href='/car/1'>
             <picture>
               <img src={carOne} alt="1e voiture populaire" />
             </picture>
             <p class={styles.popularCarName}>Citroën C5 Aircross</p>
             <span class={styles.popularCarOption}> bluehdi 180 s&amp;s eat8 Shine</span>
-          </div>
-          <div class={styles.popularCar}>
+          </a>
+          <a class={styles.popularCar} href='/car/2'>
             <picture>
               <img src={carOne} alt="2e voiture populaire" />
             </picture>
             <p class={styles.popularCarName}>Citroën C5 Aircross</p>
             <span class={styles.popularCarOption}> bluehdi 180 s&amp;s eat8 Shine</span>
-          </div>
-          <div class={styles.popularCar}>
+          </a>
+          <a class={styles.popularCar} href='/car/3'>
             <picture>
               <img src={carOne} alt="3e voiture populaire" />
             </picture>
             <p class={styles.popularCarName}>Citroën C5 Aircross</p>
             <span class={styles.popularCarOption}> bluehdi 180 s&amp;s eat8 Shine</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>

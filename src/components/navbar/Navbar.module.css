@@ -24,3 +24,14 @@
   margin: 0 20px;
   color: black;
 }
+
+.NavbarList li {
+  align-self: center;
+}
+
+@media (max-width: 500px) {
+
+  .NavbarList a {
+    font-size: 1em;
+  }
+}

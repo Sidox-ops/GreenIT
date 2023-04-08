@@ -1,9 +1,9 @@
-.car {
+.carSection {
     background: white;
+    padding: 0 10px;
 }
 
-.car section {
-    padding: 0 10px;
+section {
     display: flex;
     justify-content: center;
 }
@@ -23,12 +23,28 @@
 }
 
 .carPrice {
-    color: var(--main-color);;
+    color: var(--main-color);
     font-size: 1.2em;
 }
 
+.carBreadcrumbs {
+    gap: 12px;
+    padding: 0 30px;
+}
+
+.carBreadcrumbsButton {
+    background: var(--main-color);
+    /* color: white; */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    cursor: pointer;
+    width: 100%;
+}
+
 @media screen and (max-width: 580px) {
-    .car section {
+    .carSection {
         flex-direction: column;
         align-items: center;
     }
